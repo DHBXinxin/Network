@@ -11,8 +11,7 @@
 @interface CustomMethod : NSObject 
 
 +(instancetype)shareMethod;
-//检测是不是登陆了已经
-- (BOOL)checkIfLogin;
+
 //制作颜色图片
 - (UIImage *)getImageWithColor:(UIColor *)color;
 //动画

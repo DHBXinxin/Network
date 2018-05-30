@@ -32,6 +32,7 @@
 		2A2E914020BE4CA9004E3431 /* LXConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXConnection.h; sourceTree = "<group>"; };
 		2A2E914120BE4CA9004E3431 /* CustomMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMethod.h; sourceTree = "<group>"; };
 		2A2E914220BE4CA9004E3431 /* CustomMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMethod.m; sourceTree = "<group>"; };
+		2A2E914520BEA22F004E3431 /* Network.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 				2A2E913120BE4A26004E3431 /* Assets.xcassets */,
 				2A2E913320BE4A26004E3431 /* LaunchScreen.storyboard */,
 				2A2E913620BE4A26004E3431 /* Info.plist */,
+				2A2E914520BEA22F004E3431 /* Network.pch */,
 				2A2E913720BE4A26004E3431 /* main.m */,
 			);
 			path = Network;
@@ -304,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = Network/Network.pch;
 				INFOPLIST_FILE = Network/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = Network/Network.pch;
 				INFOPLIST_FILE = Network/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -19,13 +19,6 @@ static CustomMethod *customMethod = nil;
     return customMethod;
 }
 
-- (BOOL)checkIfLogin {
-    
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:CheckLoginKey]) {
-        return NO;
-    }
-    return YES;
-}
 - (UIImage *)getImageWithColor:(UIColor *)color {
     UIGraphicsBeginImageContext(CGSizeMake(44, 44));
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -93,7 +86,7 @@ animation.type = @"cameraIrisHollowClose ";
 - (CGSize)labelSizeWithString:(NSString *)string andFont:(UIFont *)font {
 
     CGSize stringSize;
-    CGSize size = CGSizeMake(SCREEN_WIDTH, MAXFLOAT);
+    CGSize size = CGSizeZero;//CGSizeMake(SCREEN_WIDTH, MAXFLOAT);
     NSRange range = NSMakeRange(0, string.length);
     NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc]initWithString:string];
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -101,7 +94,7 @@ animation.type = @"cameraIrisHollowClose ";
     [attribute addAttribute:NSParagraphStyleAttributeName value:style range:range];
     [attribute addAttribute:NSFontAttributeName value:font range:range];
     NSDictionary *attDic = [attribute attributesAtIndex:0 effectiveRange:&range];
-    if (VERSION >= 7) {
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 7) {
 //        获取动态的宽度为
 //        stringSize = [string sizeWithAttributes:@{NSFontAttributeName: font}];
 //        动态获取高度
