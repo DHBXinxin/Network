@@ -22,8 +22,20 @@
     // Do any additional setup after loading the view, typically from a nib.
     
 }
+//9之前
 - (void)demo1 {
-    
+    NSString *url = @"http://192.168.1.1";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:@"username" forKey:@"user"];
+    NSURLRequest *request = [[CustomMethod shareMethod]request:url WithParameter:params];
+    LXConnection *connection = [[LXConnection alloc]initWithRequest:request];
+    connection.completionHandler = ^(NSData *data) {
+        NSDictionary *info = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",info);
+    };
+    connection.failureHandler = ^(NSError *error) {
+        NSLog(@"%@",error);
+    };
 }
 
 - (void)didReceiveMemoryWarning {
