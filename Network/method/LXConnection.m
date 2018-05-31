@@ -21,8 +21,8 @@
     return self;
 }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-//    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
-//    NSLog(@"%@", [res allHeaderFields]);
+    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
+    NSLog(@"response:\n%@", [res allHeaderFields]);
     receiveData = [NSMutableData data];
 }
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
