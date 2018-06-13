@@ -16,6 +16,7 @@
 		2A2E914320BE4CA9004E3431 /* LXConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E913F20BE4CA9004E3431 /* LXConnection.m */; };
 		2A2E914420BE4CA9004E3431 /* CustomMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E914220BE4CA9004E3431 /* CustomMethod.m */; };
 		2A2E914820BFC8DA004E3431 /* SessionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E914720BFC8DA004E3431 /* SessionDemo.m */; };
+		2ABECB6520D0AF08008A1B51 /* LXNetWorkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABECB6420D0AF08008A1B51 /* LXNetWorkHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		2A2E914520BEA22F004E3431 /* Network.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.pch; sourceTree = "<group>"; };
 		2A2E914620BFC8DA004E3431 /* SessionDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionDemo.h; sourceTree = "<group>"; };
 		2A2E914720BFC8DA004E3431 /* SessionDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionDemo.m; sourceTree = "<group>"; };
+		2ABECB6320D0AF08008A1B51 /* LXNetWorkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXNetWorkHelper.h; sourceTree = "<group>"; };
+		2ABECB6420D0AF08008A1B51 /* LXNetWorkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXNetWorkHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				2A2E914220BE4CA9004E3431 /* CustomMethod.m */,
 				2A2E914020BE4CA9004E3431 /* LXConnection.h */,
 				2A2E913F20BE4CA9004E3431 /* LXConnection.m */,
+				2ABECB6320D0AF08008A1B51 /* LXNetWorkHelper.h */,
+				2ABECB6420D0AF08008A1B51 /* LXNetWorkHelper.m */,
 			);
 			path = method;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			files = (
 				2A2E914420BE4CA9004E3431 /* CustomMethod.m in Sources */,
 				2A2E912D20BE4A25004E3431 /* ViewController.m in Sources */,
+				2ABECB6520D0AF08008A1B51 /* LXNetWorkHelper.m in Sources */,
 				2A2E914320BE4CA9004E3431 /* LXConnection.m in Sources */,
 				2A2E913820BE4A26004E3431 /* main.m in Sources */,
 				2A2E912A20BE4A25004E3431 /* AppDelegate.m in Sources */,

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CustomMethod.h"
 #import "LXConnection.h"
-
+#import "LXNetWorkHelper.h"
 
 @interface ViewController ()
 
@@ -21,14 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    [self demo1];
+    [self demo1];
     
 //    [self demo2];
     
-    [self demo3];
+//    [self demo3];
 }
 //9之前
 - (void)demo1 {
+    /*
     NSString *url = @"http://10.253.1.230:8080/DAServer/DAServlet";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:@"100" forKey:@"dcs"];
@@ -42,6 +43,15 @@
     connection.failureHandler = ^(NSError *error) {
         NSLog(@"%@",error);
     };
+     */
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:@"100" forKey:@"dcs"];
+    [params setObject:@"atmosphere" forKey:@"method"];
+    [LXNetWorkHelper postWithUrlString:@"http://10.253.1.230:8080/DAServer/DAServlet" parameters:params success:^(id data) {
+        NSLog(@"%@",data);
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 - (void)demo2 {
     NSURL *url = [NSURL URLWithString:@"http://m.baidu.com"];
