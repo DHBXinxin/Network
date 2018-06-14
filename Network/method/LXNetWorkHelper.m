@@ -340,14 +340,29 @@ didFinishDownloadingToURL:(NSURL *)location{
         reName = response.suggestedFilename;
     }
     
+    //如果有其他参数的话～～～
+//    for(int i=0;i<[keys count];i++)
+//    {
+//        //得到当前key
+//        NSString *key=[keys objectAtIndex:i];
+//        
+//        //添加分界线，换行
+//        [headerStrM appendFormat:@"--%@\r\n",@"boundary"];
+//        //添加字段名称，换2行
+//        [headerStrM appendFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",key];
+//        //添加字段的值
+//        [headerStrM appendFormat:@"%@\r\n",[postParems objectForKey:key]];
+//    }
     // 表单拼接
     NSMutableString *headerStrM =[NSMutableString string];
+    
     [headerStrM appendFormat:@"--%@\r\n",@"boundary"];
     // name：表单控件名称  filename：上传文件名
     [headerStrM appendFormat:@"Content-Disposition: form-data; name=%@; filename=%@\r\n",formName,reName];
-    [headerStrM appendFormat:@"Content-Type: %@\r\n\r\n",fileType];
+    [headerStrM appendFormat:@"Content-Type: %@\r\n\r\n",fileType];//@"text/plain"
     [data appendData:[headerStrM dataUsingEncoding:NSUTF8StringEncoding]];
     
+   
     // 文件内容
     NSData *fileData = [NSData dataWithContentsOfFile:filePath];
     [data appendData:fileData];
